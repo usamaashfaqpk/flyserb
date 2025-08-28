@@ -1,0 +1,65 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Fstky2e4mdT1999
+      POSTGRES_DB: interview_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  save-service:
+    build:
+      context: ./save-service
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Fstky2e4mdT1999
+      POSTGRES_DB: interview_db
+      RABBITMQ_URL: amqp://rabbitmq:5672
+    depends_on:
+      - postgres
+      - rabbitmq
+    ports:
+      - "3001:3001"
+
+  email-service:
+    build:
+      context: ./email-service
+    environment:
+      RABBITMQ_URL: amqp://rabbitmq:5672
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+      SMTP_FROM: usama9893@gmail.com
+    depends_on:
+      - rabbitmq
+      - mailhog
+
+  frontend:
+    build:
+      context: ./frontend
+    environment:
+      NEXT_PUBLIC_SAVE_URL: http://save-service:3001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - save-service
+
+volumes:
+  pgdata:

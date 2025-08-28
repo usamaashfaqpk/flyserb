@@ -1,0 +1,67 @@
+/* [project]/Projects/flyserbinterview/frontend/src/app/page.module.css [app-client] (css) */
+.page-module__BmWPma__page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), .08);
+  --gray-alpha-100: rgba(var(--gray-rgb), .05);
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  width: 100%;
+  font-family: var(--font-geist-sans);
+  place-items: center;
+  gap: 64px;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+
+.page-module__BmWPma__form {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+}
+
+.page-module__BmWPma__inputGroup {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+
+.page-module__BmWPma__input {
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  transition: border-color .2s;
+}
+
+.page-module__BmWPma__label {
+  color: rgba(var(--gray-rgb), .7);
+  margin-bottom: 8px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.page-module__BmWPma__button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  transition: background-color .2s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page-module__BmWPma__page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), .145);
+    --gray-alpha-100: rgba(var(--gray-rgb), .06);
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+/*# sourceMappingURL=Projects_flyserbinterview_frontend_src_app_page_module_24acc4c2.css.map*/

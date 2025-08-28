@@ -1,0 +1,23 @@
+{
+  "pages": {
+    "/page": [
+      "static/chunks/4ab1f_next_dist_252cd3c0._.js",
+      "static/chunks/Projects_flyserbinterview_frontend_src_app_favicon_ico_mjs_8e049067._.js",
+      "static/chunks/[root-of-the-server]__16ce3d98._.css",
+      "static/chunks/Projects_flyserbinterview_frontend_src_app_layout_tsx_2092492a._.js",
+      "static/chunks/4ab1f_next_dist_client_components_builtin_global-error_1fab8a7e.js",
+      "static/chunks/Projects_flyserbinterview_frontend_8e59282b._.js",
+      "static/chunks/Projects_flyserbinterview_frontend_src_app_page_module_24acc4c2.css",
+      "static/chunks/Projects_flyserbinterview_frontend_src_app_page_tsx_1fab8a7e._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_97d7b2cd._.js",
+      "static/chunks/4ab1f_next_dist_compiled_react-dom_3b3e04fe._.js",
+      "static/chunks/4ab1f_next_dist_compiled_next-devtools_index_0a6e69ff.js",
+      "static/chunks/4ab1f_next_dist_compiled_eb801eaa._.js",
+      "static/chunks/4ab1f_next_dist_client_28086c92._.js",
+      "static/chunks/4ab1f_next_dist_25671146._.js",
+      "static/chunks/4ab1f_@swc_helpers_cjs_e88775d6._.js",
+      "static/chunks/Projects_flyserbinterview_frontend_a0ff3932._.js",
+      "static/chunks/turbopack-Projects_flyserbinterview_frontend_d38de807._.js"
+    ]
+  }
+}
